@@ -1,7 +1,24 @@
-body{
-    background-color: #efebe9;
+.background{
+    /* Ubicación de la imagen */
+    background-image: url("../img/FondoHome.png");
+    background-position: 50% 50%;
+    background-size:cover;
+    background-repeat: no-repeat;
+    padding:0;
+    padding-top:50px;
+    padding-bottom:50px;
+    height:100vh;
+}
+
+.containerFormat{
+    
+    padding: 1.5rem;
+    border-width: 1px;
+    border-radius: .25rem;
+    border-top-right-radius: .25rem;
 }
 
 .tabla{
+
     margin-top: 100px;
 }

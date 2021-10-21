@@ -12,14 +12,15 @@
         <link rel="stylesheet" href="./css/estilos.css">
 </head>
 <body>
-    <!-- BARRA DE NAVEGACIÓN-->
+    <div class="container-fluid background">
+     <!-- BARRA DE NAVEGACIÓN
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-          <a class="navbar-brand" href="http://www.jordimolet.es"><img src="/img/LogoTransparente.png" alt="" height=50px></a>
+          <a class="navbar-brand"><img src="/img/LogoTransparente.png" alt="" height=50px></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <!--<a class="navbar-brand" href="#">Navbar</a>-->
+          <a class="navbar-brand" href="#">Navbar</a>
           <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
@@ -31,37 +32,35 @@
             </ul>
           </div>
         </div>
-      </nav>
+      </nav> -->
     <!-- Contenido-->
-    <div class="container tabla">
-        <div class="row">
-            <div class="col">
-                <h2>Equipo Senior</h2>
-            </div>
-            <div class="col">
-                <table class="table table-dark table-stripped">
-                    <thead>
-                        <td>#</td>
-                        <td>nombre</td>
-                        <td>apellidos</td>
-                        <td>posicion</td>
-                    </thead>
-                    <tr>
-                        <td>1</td>
-                        <td>Ana</td>
-                        <td>Gomez</td>
-                        <td>Base</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Alex</td>
-                        <td>Perez</td>
-                        <td>Base</td>
-                    </tr>
-                </table>
-            </div>
+    <div class="container bg-light containerFormat">
+      <form>
+        <div class="mb-3">
+          <label for="InputUsername" class="form-label">Username</label>
+          <input type="text" class="form-control" id="InputUsername" aria-describedby="emailHelp">
         </div>
+        <div class="mb-3">
+          <label for="InputAvatar" class="form-label">Avatar</label>
+        </div>
+        <div class="d-flex">
+          <div class="form-check p-4">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Default radio
+            </label>
+          </div>
+          <div class="form-check p-4">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+            <label class="form-check-label" for="flexRadioDefault2">
+              Default checked radio
+            </label>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Entrar</button>
+      </form>
     </div>
+  </div> 
 </body>
 </html>
 
