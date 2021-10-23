@@ -10,8 +10,13 @@
     height:100vh;
 }
 
+.labelTitulo{
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
 .containerFormat{
-    
     padding: 1.5rem;
     border-width: 1px;
     border-radius: .25rem;
@@ -19,6 +24,12 @@
 }
 
 .tabla{
-
     margin-top: 100px;
 }
+
+    
+div.radio.radio-adjust{
+    margin-left:50%;
+}
+
+
