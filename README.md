@@ -1,2 +1,2 @@
 # P9-FunDevelop
-Este es el repositorio donde compartiremos el proyecto el equipo Fun Develop
+Este es el repositorio donde compartiremos el proyecto del equipo Fun Develop
