@@ -10,6 +10,18 @@
     height:100vh;
 }
 
+.backgroundSalas{
+    /* Ubicación de la imagen */
+    background-image: url("../img/FondoSalas.png");
+    background-position: 50% 50%;
+    background-size:cover;
+    background-repeat: no-repeat;
+    padding:0;
+    padding-top:50px;
+    padding-bottom:50px;
+    height:100vh;
+}
+
 .labelTitulo{
     font-size: 30px;
     font-family: 'Times New Roman', Times, serif;
