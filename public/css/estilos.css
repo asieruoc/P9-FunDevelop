@@ -1,6 +1,18 @@
 .backgroundHome{
     /* Ubicación de la imagen */
     background-image: url("../img/FondoHome.png");
+    background-position: 40% 30%;
+    background-size:cover;
+    background-repeat: no-repeat;
+    padding:0;
+    padding-top:100px;
+    padding-bottom:0px;
+    height:100vh;
+}
+
+.backgroundSalas{
+    /* Ubicación de la imagen */
+    background-image: url("../img/FondoSalas.png");
     background-position: 50% 50%;
     background-size:cover;
     background-repeat: no-repeat;
