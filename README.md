@@ -3,7 +3,7 @@
 
 
 <h1 align="center">P9 - FunDevelop</h1>
-<h2 align="center"> PRODUCTO 2. Desarrollo de una aplicación para la gestión de usuarios y la selección de la salade juego.</h2>
+<h2 align="center"> PRODUCTO 2. Desarrollo de una aplicación para la gestión de usuarios y la selección de la salade juego</h2>
 
 <p align="center"> </p>
 <p align="center"><https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.uoc.edu%2F&psig=AOvVaw1sId4QjhKxHq-VzHqiqRrR&ust=1633302964075000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCOjMuuztrPMCFQAAAAAdAAAAABAD></p> 
