@@ -19,6 +19,17 @@ const port = serverConfig['port'];
 //Ante cualquier request devolveremos las siguientes respuestas:
 const server = http.createServer((req, res) => {
     router.init(req,res);
+<<<<<<< 863579243680f8b30a645d6e6d102c8c3032dcd6
+=======
+
+    // we can access HTTP headers
+  req.on('data', data => {
+    if(req.url === "/salas"){
+      console.log("Almacenar datos del jugador " + data);
+    }
+  })
+
+>>>>>>> Imagen fondo responsive y acceso a salas
 });
 
 //Lanzar servidor
