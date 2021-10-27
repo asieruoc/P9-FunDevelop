@@ -3,6 +3,7 @@ const fs=require('fs');
 const HTML_CONTENT_TYPE="text/html";
 const CSS_CONTENT_TYPE="text/css";
 const PNG_CONTENT_TYPE="image/png";
+const JS_CONTENT_TYPE="text/javascript";
 
 exports.init = function(req, res){
     res.statusCode = 200;
@@ -44,6 +45,16 @@ exports.init = function(req, res){
         }); 
     }else if(path.match("\.png$")){
         res.setHeader('Content-Type', PNG_CONTENT_TYPE);
+        const css=fs.readFile(__dirname + '/../public/' + path, (err, data) => {
+            if(err){
+                console.log("Error en la carga de" + path);
+                res.end("Error en la carga de" + path);
+            }else{
+                res.end(data);
+            }
+        }); 
+    }else if(path.match("\.js$")){
+        res.setHeader('Content-Type', JS_CONTENT_TYPE);
         const css=fs.readFile(__dirname + '/../public/' + path, (err, data) => {
             if(err){
                 console.log("Error en la carga de" + path);

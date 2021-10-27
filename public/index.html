@@ -13,62 +13,62 @@
         <link rel="stylesheet" href="./css/estilos.css">
 </head>
 <body>
-    <div class="container-fluid backgroundHome">
-    
+  <div class="container-fluid backgroundHome">
     <!-- Contenido-->
-    <div class="container bg-light opacity-90 containerFormat col-md-5">
-      <div class="labelTitulo">
-        <label><img src="/img/banderas.png">Entra y conquista el mundo.</label>
-      </div>
-      <form>
-      </br>
-        <div class="form-group">
-          <label for="exampleInputEmail1">NOMBRE:</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" 
-                 aria-describedby="emailHelp" placeholder="Entra tu nombre">
+    <div class="form-group">
+      <div class="container bg-light opacity-90 containerFormat col-lg-5">
+        <div class="labelTitulo">
+          <label><img src="/img/banderas.png">Entra y conquista el mundo.</label>
         </div>
+        <form action="/" method="post">
         </br>
-        <div class="form-group">
-          <label for="exampleInputEmail1">AVATAR:</label>
-        </div>
-        <div class="form-check">
-        <div class="layout-box">
-          <div class="row">
-            <div class="col-md-2 col-sm-2"><img src="/img/Avatar1.png" class="layout-image">
-              <div class="radio radio-adjust">
-                <label><input type="radio" name="avatar-radio"></label>
+          <div class="form-group">
+            <label for="inputName">NOMBRE:</label>
+            <input type="text" class="form-control" id="inputName" name="playerName" placeholder="Entra tu nombre">
+          </div>
+          </br>
+          <div class="form-group">
+            <label for="inputAvatar">AVATAR:</label>
+          </div>
+          <div class="form-check">
+            <div class="layout-box">
+              <div class="row">
+                <div class="col-xs-2 col-md-2 col-xl-2"><img src="/img/Avatar1.png" class="layout-image img-fluid min-vw-50">
+                  <div class="radio radio-adjust">
+                    <label><input type="radio" name="avatar-radio" value="1"></label>
+                  </div>
+                </div>
+                <div class="col-md-2 col-sm-2"><img src="/img/Avatar2.png" class="layout-image">
+                  <div class="radio radio-adjust">
+                    <label><input type="radio" name="avatar-radio" value="2"></label>
+                  </div>
+                </div>
+                <div class="col-md-2 col-sm-2"><img src="/img/Avatar3.png" class="layout-image">
+                  <div class="radio radio-adjust">
+                    <label><input type="radio" name="avatar-radio" value="3"></label>
+                  </div>
+                </div>
+                <div class="col-md-2 col-sm-2"><img src="/img/Avatar4.png" class="layout-image">
+                  <div class="radio radio-adjust">
+                    <label><input type="radio" name="avatar-radio" value="4"></label>
+                  </div>
+                </div>
+                <div class="col-md-2 col-sm-2"><img src="/img/Avatar5.png" class="layout-image">
+                  <div class="radio radio-adjust">
+                    <label><input type="radio" name="avatar-radio" value="5"></label>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="col-md-2 col-sm-2"><img src="/img/Avatar2.png" class="layout-image">
-              <div class="radio radio-adjust">
-                <label><input type="radio" name="avatar-radio"></label>
-              </div>
-            </div>
-            <div class="col-md-2 col-sm-2"><img src="/img/Avatar3.png" class="layout-image">
-              <div class="radio radio-adjust">
-                <label><input type="radio" name="avatar-radio"></label>
-              </div>
-            </div>
-            <div class="col-md-2 col-sm-2"><img src="/img/Avatar4.png" class="layout-image">
-              <div class="radio radio-adjust">
-                <label><input type="radio" name="avatar-radio"></label>
-              </div>
-            </div>
-            <div class="col-md-2 col-sm-2"><img src="/img/Avatar5.png" class="layout-image">
-              <div class="radio radio-adjust">
-                <label><input type="radio" name="avatar-radio"></label>
+              </br>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary">Entrar</button>
               </div>
             </div>
           </div>
-        </div>
-        </div>
-        </br>
-        <div class="text-center">
-          <button type="submit" class="btn btn-primary">Entrar</button>
-        </div>
-      </form>
+        </form>
+      </div> 
     </div>
-  </div> 
+  </div>
 </body>
 </html>
 

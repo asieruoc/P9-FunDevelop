@@ -18,10 +18,21 @@ const port = serverConfig['port'];
 //Peticiones Request (via navegador), Devolvemos una respuesta (res)
 //Ante cualquier request devolveremos las siguientes respuestas:
 const server = http.createServer((req, res) => {
+
     router.init(req,res);
+
+    // we can access HTTP headers
+  req.on('data', data => {
+    if(req.url === "/salas"){
+      console.log("Almacenar datos del jugador " + data);
+    }
+  })
+
 });
 
 //Lanzar servidor
 server.listen(port, hostname, () => {
   console.log(`Servidor corriendo en http://${hostname}:${port}/`);
 });
+
+// Capturar usuario y avatar
