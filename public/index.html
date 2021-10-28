@@ -12,7 +12,7 @@
     <!--CSS-->
         <link rel="stylesheet" href="./css/estilos.css">
 </head>
-<body>
+<body onload="loadUserData()">
     <div class="container-fluid backgroundHome">
     
     <!-- Contenido-->
@@ -20,7 +20,7 @@
       <div class="labelTitulo">
         <label><img src="/img/banderas.png">Entra y conquista el mundo.</label>
       </div>
-      <form action="/salas" method="post">
+      <form id="userLogin" action="/salas" method="post">
       </br>
         <div class="form-group">
           <label for="exampleInputEmail1">NOMBRE:</label>
@@ -70,11 +70,50 @@
         </div>
         </br>
         <div class="text-center">
-          <button type="submit" class="btn btn-primary">Entrar</button>
+          <button type="button" class="btn btn-primary" onclick="sendForm()">Entrar</button>
         </div>
       </form>
     </div>
-  </div> 
+  </div>
+  <script>
+
+    function loadUserData() {
+      if(localStorage.getItem("userData")){
+        var userPrefs = JSON.parse(localStorage.getItem("userData"));
+        document.getElementById("exampleInputEmail1").value = userPrefs.username;
+        var radios = document.getElementsByName('avatar-radio');
+        var radioPos = userPrefs.avatar - 1;
+        radios[radioPos].checked = true;
+      }
+    }
+
+
+    function sendForm() {
+      var form = document.getElementById("userLogin");
+
+      var username = document.getElementById("exampleInputEmail1").value;
+
+      var radios = document.getElementsByName('avatar-radio');
+      var found = false;
+      var i = 0;
+      var avatar = 0;
+      while(i < radios.length && !found) {
+        if (radios[i].checked) {
+          // do whatever you want with the checked radio
+          avatar = radios[i].value;
+          found = true;
+        }
+        i++;
+      }
+
+      var userPrefs = {username: username, avatar: avatar};
+
+      localStorage.setItem("userData", JSON.stringify(userPrefs));
+
+      form.submit();
+    }
+
+  </script> 
 </body>
 </html>
 
