@@ -14,70 +14,63 @@
 </head>
 <body onload="loadUserData()">
     <div class="container-fluid backgroundHome">
-    
     <!-- Contenido-->
-    <div class="container bg-light opacity-90 containerFormat col-md-5">
-      <div class="labelTitulo">
-        <label><img src="/img/banderas.png">Entra y conquista el mundo.</label>
-      </div>
-      <form id="userLogin" action="/salas" method="post">
-      </br>
-        <div class="form-group">
-          <label for="exampleInputEmail1">NOMBRE:</label>
-<<<<<<< 863579243680f8b30a645d6e6d102c8c3032dcd6
-          <input type="email" class="form-control" id="exampleInputEmail1" 
-                 aria-describedby="emailHelp" placeholder="Entra tu nombre">
-=======
-          <input type="text" class="form-control" id="exampleInputEmail1" name="playerName"
-                 aria-describedby="emailHelp" placeholder="Entra tu nombre">
-
-
-        </div>
-        </br>
-        <div class="form-group">
-          <label for="exampleInputEmail1">AVATAR:</label>
-        </div>
-        <div class="form-check">
-        <div class="layout-box">
-          <div class="row">
-            <div class="col-md-2 col-sm-2"><img src="/img/Avatar1.png" class="layout-image">
-              <div class="radio radio-adjust">
-                <label><input type="radio" name="avatar-radio" value="1"></label>
-              </div>
+        <div class="container bg-light opacity-90 containerFormat col-md-5">
+            <div class="labelTitulo">
+                <label><img src="/img/banderas.png">Entra y conquista el mundo.</label>
             </div>
-            <div class="col-md-2 col-sm-2"><img src="/img/Avatar2.png" class="layout-image">
-              <div class="radio radio-adjust">
-                <label><input type="radio" name="avatar-radio" value="2"></label>
-              </div>
-            </div>
-            <div class="col-md-2 col-sm-2"><img src="/img/Avatar3.png" class="layout-image">
-              <div class="radio radio-adjust">
-                <label><input type="radio" name="avatar-radio" value="3"></label>
-              </div>
-            </div>
-            <div class="col-md-2 col-sm-2"><img src="/img/Avatar4.png" class="layout-image">
-              <div class="radio radio-adjust">
-                <label><input type="radio" name="avatar-radio" value="4"></label>
-              </div>
-            </div>
-            <div class="col-md-2 col-sm-2"><img src="/img/Avatar5.png" class="layout-image">
-              <div class="radio radio-adjust">
-                <label><input type="radio" name="avatar-radio" value="5"></label>
-              </div>
-            </div>
-          </div>
+            <form id="userLogin" action="/salas" method="post">
+            </br>
+                <div class="form-group">
+                    <label for="inputName">NOMBRE:</label>
+                    <input type="text" class="form-control" id="inputName" name="playerName" placeholder="Entra tu nombre">
+                </div>
+                </br>
+                <div class="form-group">
+                    <label for="">AVATAR:</label>
+                </div>
+                </br>
+                <div class="form-check">
+                    <div class="layout-box">
+                        <div class="row">
+                            <div class="col-md-2 col-sm-2"><img src="/img/Avatar1.png" class="layout-image">
+                                <div class="radio radio-adjust">
+                                    <label><input type="radio" name="avatar-radio" value="1"></label>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-2"><img src="/img/Avatar2.png" class="layout-image">
+                                <div class="radio radio-adjust">
+                                    <label><input type="radio" name="avatar-radio" value="2"></label>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-2"><img src="/img/Avatar3.png" class="layout-image">
+                                <div class="radio radio-adjust">
+                                    <label><input type="radio" name="avatar-radio" value="3"></label>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-2"><img src="/img/Avatar4.png" class="layout-image">
+                                <div class="radio radio-adjust">
+                                    <label><input type="radio" name="avatar-radio" value="4"></label>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-2"><img src="/img/Avatar5.png" class="layout-image">
+                                <div class="radio radio-adjust">
+                                    <label><input type="radio" name="avatar-radio" value="5"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </br>
+                <div class="text-center">
+                    <button type="button" class="btn btn-primary" onclick="sendForm()">Entrar</button>
+                </div>
+            </form>
         </div>
-        </div>
-        </br>
-        <div class="text-center">
-          <button type="button" class="btn btn-primary" onclick="sendForm()">Entrar</button>
-        </div>
-      </form>
     </div>
-  </div>
   <script>
 
-    function loadUserData() {
+      function loadUserData() {
       if(localStorage.getItem("userData")){
         var userPrefs = JSON.parse(localStorage.getItem("userData"));
         document.getElementById("exampleInputEmail1").value = userPrefs.username;

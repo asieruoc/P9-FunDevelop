@@ -38,11 +38,6 @@
     text-align: center;
 }
 
-
-/* .tabla{
-    margin-top: 100px;
-} */
-
 /* Estilo selección avatar Formulario Principal */
 div.radio.radio-adjust{
     margin-left:50%;
@@ -52,22 +47,22 @@ div.radio.radio-adjust{
 .wrapper {
     display: flex;
     justify-content: space-between;
-  }
-  .wrapper .box {
+}
+.wrapper .box {
     border: 1px solid black;
     width: 45%;
-  }
-  .wrapper .box ul {
+}
+.wrapper .box ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-  }
-  .wrapper .box ul li {
+}
+.wrapper .box ul li {
     padding: 10px;
     cursor: pointer;
-  }
-  .wrapper .box ul li:hover {
+}
+.wrapper .box ul li:hover {
     background-color: #dde2e2;
-  }
+}
 
 
