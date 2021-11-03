@@ -8,13 +8,16 @@ const JS_CONTENT_TYPE="text/javascript";
 exports.init = function(req, res){
     res.statusCode = 200;
 
+
     //Path
     const path=req.url;
     console.log(path);
+    encabezadoHTML=res.setHeader('Content-Type', HTML_CONTENT_TYPE);
+
+
 
     //Enrutado
-    if(path==="/"){
-        res.setHeader('Content-Type', HTML_CONTENT_TYPE);
+    if(path==="/" && encabezadoHTML){
         const index=fs.readFile(__dirname + '/../public/index.html', (err, data) => {
             if(err){
                 console.log("Error en la carga del index.html");
@@ -22,8 +25,7 @@ exports.init = function(req, res){
             }
                 res.end(data);
         }); 
-    }else if(path==="/salas"){
-        res.setHeader('Content-Type', HTML_CONTENT_TYPE);
+    }else if(path==="/salas"&& encabezadoHTML){
         const index=fs.readFile(__dirname + '/../public/salas.html', (err, data) => {
             if(err){
                 console.log("Error en la carga del salas.html");
@@ -57,6 +59,7 @@ exports.init = function(req, res){
                 res.end("Error en la carga de" + path);
             }
                 res.end(data);
+
         }); 
     }else{
         res.setHeader('Content-Type', HTML_CONTENT_TYPE);
