@@ -1,26 +1,20 @@
-//Carga de módulos o librerias externas
-//Módulo interno de Node. Nos ayuda a realizar la interacción con las peticiones request y response.
+//1
 const http = require('http');
 const fs = require('fs');
-//Módulo que hemos generado nosotros.
+//2
 const router = require('./router/router.js');
-
 //Configuraciones del servidor
-//Guardamos en la variable serverConfigFile la lectura del fichero env.json en texto plano.
-const serverConfigFile = fs.readFileSync(__dirname + '/config/env.json', 'utf8');
-//Parseamos el fichero y lo guardamos en la variable serverConfig.
-const serverConfig = JSON.parse(serverConfigFile);
-//Damos el valor que corresponde en cada uno de sus variables.
+const serverConfigFile = fs.readFileSync(__dirname + '/config/env.json', 'utf8');//3
+const serverConfig = JSON.parse(serverConfigFile);//4
+//5
 const hostname = serverConfig['hostname'];
 const port = serverConfig['port'];
 
 //Crear servidor
-//Peticiones Request (via navegador), Devolvemos una respuesta (res)
-//Ante cualquier request devolveremos las siguientes respuestas:
-const server = http.createServer((req, res) => {
+
+const server = http.createServer((req, res) => { //6
     router.init(req,res);
-    // we can access HTTP headers
-    req.on('data', data => {
+    req.on('data', data => { //7
       if(req.url === "/salas"){
         console.log("Almacenar datos del jugador " + data);
       }
