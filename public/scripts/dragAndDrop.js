@@ -23,12 +23,10 @@ const drop = event => {
     document.getElementById("playerList").removeChild(li);
     li.draggable = false;
     destList.appendChild(li);
-  }
-  else if(destList.id === parentId){
-    alert("el jugador ya está en la sala");
-  }
-  else {
-    alert("La sala está llena");
+  } else if(destList.id === parentId){
+    alert("Error: El jugador ya está en la sala");
+  } else {
+    alert("Error: La sala está llena");
   }
 };
 
