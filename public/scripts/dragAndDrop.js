@@ -3,7 +3,6 @@ const dragstart = event => {
     event.dataTransfer.setData("text", text);
     console.log(text);
   };
-  
   const drop = event => {
     event.preventDefault();
     let text = event.dataTransfer.getData('text');
@@ -14,7 +13,6 @@ const dragstart = event => {
       destList.appendChild(item);
     }
   };
-  
   const dragover = event => {
     event.preventDefault();
   };
