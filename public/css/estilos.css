@@ -1,19 +1,20 @@
 .backgroundHome{
     /* Ubicación de la imagen */
     background-image: url("../img/FondoHome.png");
-    background-position: 50% 50%;
+    width: 100%;
     background-size:cover;
     background-repeat: no-repeat;
     padding:0;
     padding-top:50px;
     padding-bottom:50px;
     height:100vh;
-}
 
+}
+/* Fondo pantalla salas responsive  */
 .backgroundSalas{
     /* Ubicación de la imagen */
     background-image: url("../img/FondoSalas.png");
-    background-position: 50% 50%;
+    width: 100%;
     background-size:cover;
     background-repeat: no-repeat;
     padding:0;
@@ -22,12 +23,7 @@
     height:100vh;
 }
 
-.labelTitulo{
-    font-size: 30px;
-    font-family: 'Times New Roman', Times, serif;
-    text-align: center;
-}
-
+/* Estilo contenedor Formulario Principal */
 .containerFormat{
     padding: 1.5rem;
     border-width: 1px;
@@ -35,13 +31,38 @@
     border-top-right-radius: .25rem;
 }
 
-.tabla{
-    margin-top: 100px;
+/* Estilo titulo Formulario Principal */
+.labelTitulo{
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
 }
 
-    
+/* Estilo selección avatar Formulario Principal */
 div.radio.radio-adjust{
     margin-left:50%;
+}
+
+/* Estilo Drag&DRop */
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.wrapper .box {
+    border: 1px solid black;
+    width: 45%;
+}
+.wrapper .box ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.wrapper .box ul li {
+    padding: 10px;
+    cursor: pointer;
+}
+.wrapper .box ul li:hover {
+    background-color: #dde2e2;
 }
 
 
