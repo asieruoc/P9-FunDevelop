@@ -44,7 +44,7 @@ div.radio.radio-adjust{
     margin-left:50%;
 }
 
-/* Estilo Drag&DRop */
+/* Estilo Wrapper (envoltorio) Drag&DRop */
 .wrapper {
     display: flex;
     justify-content: space-around;

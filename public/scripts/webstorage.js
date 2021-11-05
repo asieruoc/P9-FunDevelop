@@ -7,7 +7,6 @@ function loadUserData() {
         radios[radioPos].checked = true;
     }
 }
-
 function sendForm() {
     var form = document.getElementById("userLogin");
     var username = document.getElementById("exampleName").value;
@@ -23,7 +22,6 @@ function sendForm() {
         }
         i++;
     }
-
     var userPrefs = {username: username, avatar: avatar};
     localStorage.setItem("userData", JSON.stringify(userPrefs));
     form.submit();
