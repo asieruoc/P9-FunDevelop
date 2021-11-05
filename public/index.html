@@ -25,17 +25,21 @@
         <div class="labelTitulo">
             <label><img src="/img/banderas.png">Entra y conquista el mundo.</label>
         </div>
+        <!--Creamos el formulario con metodo post-->
         <form id="userLogin" action="/salas" method="post">
             </br>
+            <!--Creamos elemento nombre-->
             <div class="form-group">
                 <label for="inputName">NOMBRE:</label>
                 <input type="text" class="form-control" id="inputName" name="playerName" placeholder="Entra tu nombre">
             </div>
             </br>
+            <!--Creamos elemento avatar-->
             <div class="form-group">
                 <label for="">AVATAR:</label>
             </div>
             </br>
+            <!--Creamos clase para garantizar márgenes adecuados para las etiquetas y casillas de verificación-->
             <div class="form-check">
                 <div class="layout-box">
                     <div class="row">
@@ -68,6 +72,7 @@
                 </div>
             </div>
             </br>
+            <!--Creamos boton que llama a la función sendForm-->
             <div class="text-center">
                 <button type="button" class="btn btn-primary" onclick="sendForm()">Entrar</button>
             </div>
@@ -75,44 +80,5 @@
     </div>
 </div>
 
-<script>
-
-    function loadUserData() {
-        if(localStorage.getItem("userData")){
-            var userPrefs = JSON.parse(localStorage.getItem("userData"));
-            document.getElementById("inputName").value = userPrefs.username;
-            var radios = document.getElementsByName('avatar-radio');
-            var radioPos = userPrefs.avatar - 1;
-            radios[radioPos].checked = true;
-        }
-    }
-
-
-    function sendForm() {
-        var form = document.getElementById("userLogin");
-
-        var username = document.getElementById("inputName").value;
-
-        var radios = document.getElementsByName('avatar-radio');
-        var found = false;
-        var i = 0;
-        var avatar = 0;
-        while(i < radios.length && !found) {
-            if (radios[i].checked) {
-                // do whatever you want with the checked radio
-                avatar = radios[i].value;
-                found = true;
-            }
-            i++;
-        }
-
-        var userPrefs = {username: username, avatar: avatar};
-
-        localStorage.setItem("userData", JSON.stringify(userPrefs));
-
-        form.submit();
-    }
-
-</script>
 </body>
 </html>
