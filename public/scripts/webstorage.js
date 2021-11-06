@@ -4,9 +4,9 @@ function loadUserData() {
     if(localStorage.getItem("userData")){
         /* Analizamos el contenido de la cadena con formato JSON y extraemos el valor de userData guardandolo en la variable userPrefs*/
         var userPrefs = JSON.parse(localStorage.getItem("userData"));
-        /*Asignamos a inputName (id del nombre del fomrulario) el valor del username userPrefs.*/
+        /*DOM. Recuperamos un elemento por su identificador (inputName) y que tenga el valor de username*/
         document.getElementById("inputName").value = userPrefs.username;
-        /*Guardamos en radios una lista de todos los avatares*/
+        /*DOM. Recuperamos en un array, los elementos por su nombre (avatar-radio)*/
         var radios = document.getElementsByName('avatar-radio');
         /*Guardamos en radioPos el avatar seleccionado anteriormente*/
         var radioPos = userPrefs.avatar - 1;
@@ -16,16 +16,16 @@ function loadUserData() {
 }
 /* Funcion que guarda los datos del formulario a localstorage*/
 function sendForm() {
-    /*Guardamos en la variable form el formulario*/
+    /*DOM. Recuperamos un elemento (formulario) por su identificador (userLogin) */
     var form = document.getElementById("userLogin");
-    /*Guardamos en username el valor de inputName (campo donde escribimos el nombre)*/
+    /*DOM. Recuperamos un elemento (nombre jugador) por su identificador (inputName)*/
     var username = document.getElementById("inputName").value;
-    /*Guardamos en radios una lista de los avatar*/
+    /*DOM. Recuperamos los elementos (avatares) por su nombre (avatar-radio)*/
     var radios = document.getElementsByName('avatar-radio');
     var found = false;
     var i = 0;
     var avatar = 0;
-    /*Bucle donde recorremos la lista de avatares para encontrar el seleccionado por el usuario*/
+    /*Bucle donde recorremos el array de avatares para encontrar el seleccionado por el usuario*/
     while(i < radios.length && !found) {
         if (radios[i].checked) {
             avatar = radios[i].value;

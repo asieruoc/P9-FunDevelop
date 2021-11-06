@@ -1,3 +1,4 @@
+/*Definimos que el maximo de jugadores por sala es de 4*/
 const MAX_PLAYERS = 4;
 
 const dragstart = event => {
@@ -12,12 +13,6 @@ const drop = event => {
   let parentId = event.dataTransfer.getData('parentId');
   let destList = event.currentTarget;
   if(destList && destList.id !== parentId && destList.childElementCount < MAX_PLAYERS) {
-
-    /*
-    let item = document.createElement('li');
-    item.textContent = text;
-    destList.appendChild(item);
-    */
     let elementId = event.dataTransfer.getData("elementId");
     let li = document.getElementById(elementId);
     document.getElementById("playerList").removeChild(li);
