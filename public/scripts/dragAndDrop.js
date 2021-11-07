@@ -4,7 +4,9 @@ const MAX_PLAYERS = 4;
 const dragstart = event => {
   let text = event.srcElement.textContent;
   /*Establecemos la información que queremos compartir
-  * Tenemos dos parametros, formato de la información y donde esta la información*/
+  * Tenemos dos parametros, formato de la información y donde esta la información
+  parentId selecciona el nodo padre del elemento arrastrado, nodo id es el propio elemento arrastrado
+  usamos parentId para identificar en que contenedor se realiza el evento*/
   event.dataTransfer.setData("parentId", event.currentTarget.parentElement.id);
   event.dataTransfer.setData("elementId", event.currentTarget.id);
   console.log(text);
@@ -15,8 +17,9 @@ const drop = event => {
 * de tal forma que nos deja libertad para que nosotros seamos los que le decimos como comportarse al arrastrar
 * el objeto*/
   event.preventDefault();
-  /**/
+  /*Recuperamos el id Padre*/
   let parentId = event.dataTransfer.getData('parentId');
+  /*destList es el nodo destino*/
   let destList = event.currentTarget;
   if(destList && destList.id !== parentId && destList.childElementCount < MAX_PLAYERS) {
     let elementId = event.dataTransfer.getData("elementId");

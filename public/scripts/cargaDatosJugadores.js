@@ -11,7 +11,7 @@ function loadPlayer() {
         li.draggable = true;
         /*Comienza a arrastrar un element*/
         li.ondragstart = dragstart;
-        li.id = "playerLi";
+        li.id = "player";
 
         /*Modificamos DOM. Creamos un elemento (nuevo nodo) Imagen*/
         let avatar = document.createElement("img");
