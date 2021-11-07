@@ -15,7 +15,7 @@
 .backgroundSalas{
     /* Ubicación de la imagen */
     background-image: url("../img/FondoSalas.png");
-    background-position: 50% 50%;
+    width: 100%;
     background-size:cover;
     background-repeat: no-repeat;
     padding:0;

@@ -7,11 +7,9 @@ const JS_CONTENT_TYPE="text/javascript";
 
 exports.init = function(req, res){
     res.statusCode = 200;
-
     //Path
     const path=req.url;
     console.log(path);
-
     //Enrutado
     if(path==="/"){
         res.setHeader('Content-Type', HTML_CONTENT_TYPE);
@@ -67,5 +65,4 @@ exports.init = function(req, res){
         res.setHeader('Content-Type', HTML_CONTENT_TYPE);
         res.end("Error 404 - Pagina no encontrada");
     }
-
 }
