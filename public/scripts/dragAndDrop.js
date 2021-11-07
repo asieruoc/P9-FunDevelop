@@ -26,7 +26,7 @@ const drop = event => {
     li.draggable = false;
     /*Se añade la lista al elemento destList (lista donde se muestran todos los jugadores de la sala)*/
     destList.appendChild(li);
-
+  /*Controlamos posibles errores*/
   } else if(destList.id === parentId){
     alert("Error: El jugador ya está en la sala");
   } else {
