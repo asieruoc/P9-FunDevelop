@@ -121,7 +121,7 @@ Los **objetos que participan** en esta API són:
 	- `Drop`: cuando el elemento es soltado en el área de destino
 	-  `Dragleave`: cuando el elemento arrastrado sale del área de destino.
 - El **objeto a arrastrar** que tiene disponibles los siguientes eventos:
-	- `Dragstar`: desencadena la acción al comenzar a arrastrar.
+	- `Dragstart`: desencadena la acción al comenzar a arrastrar.
 	-  `Drag`: desencadena la acción durante la operación de arrastre.
 	- `Dragend`: desencadena la acción al terminar de arrastrar.
 
