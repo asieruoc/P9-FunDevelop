@@ -20,23 +20,48 @@
 <div class="container-fluid backgroundSalas">
     <!-- Contenido-->
     <div class="wrapper">
-        <div class="box source">
-            <div class="tituloSalas">
-                <h4>JUGADORES EN ESPERA</h4>
+        <div class="row">
+            <div class="col-6">
+                <div class="box source">
+                    <div class="tituloSalas">
+                        <h4>JUGADORES EN ESPERA</h4>
+                    </div>
+                    <ul id="playerList" class="source-list">
+                    </ul>
+                </div>
             </div>
-            <ul id="playerList" class="source-list">
-            </ul>
-        </div>
-        <div class="box destination">
-            <div class="tituloSalas">
-                <h4>SALA 1</h4>
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="box destination">
+                            <div class="tituloSalas">
+                                <h4>SALA 1</h4>
+                            </div>
+                            <ul id="sala1"  class="dest-list" ondrop="drop(event)" ondragover="dragover(event)">
+                                <li>Jugador Test1</li>
+                                <li>Jugador Test2</li>
+                                <li>Jugador Test3</li>
+                                <!--<li draggable="true" ondragstart="dragstart(event)">Jugador Test4</li>-->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="box destination">
+                            <div class="tituloSalas">
+                                <h4>SALA 2</h4>
+                            </div>
+                            <ul id="sala2"  class="dest-list" ondrop="drop(event)" ondragover="dragover(event)">
+                                <li>Jugador Test1</li>
+                                <li>Jugador Test2</li>
+                                <li>Jugador Test3</li>
+                                <!--<li draggable="true" ondragstart="dragstart(event)">Jugador Test4</li>-->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <ul id="sala1"  class="dest-list" ondrop="drop(event)" ondragover="dragover(event)">
-                <li>Jugador Test1</li>
-                <li>Jugador Test2</li>
-                <li>Jugador Test3</li>
-                <!--<li draggable="true" ondragstart="dragstart(event)">Jugador Test4</li>-->
-            </ul>
         </div>
     </div>
 </div>
