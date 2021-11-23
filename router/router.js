@@ -12,7 +12,6 @@ var provider = require('../provider/memory/salas-provider');
 
 
 
-
 // Home page route.
 router.get('/', function (req, res) {
     //res.render(path.join(__dirname, '/../public/index.html'), {name: "hola"});
