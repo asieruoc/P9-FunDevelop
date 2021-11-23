@@ -22,13 +22,15 @@ const express = require('express')
 const bodyParser = require('body-parser')
 
 //creamos variable app que llama a express.
-const app = express()
+const app = express();
 
 
 //añadimos los middlewares con el metodo use con la propiedad extended
-app.use(bodyParser.urlencoded({ extended: false}))
+app.use(bodyParser.urlencoded({ extended: false}));
 //Para poder admitir peticiones con el cuerpo de mensaje en JSON
-app.use(bodyParser.json())
+app.use(bodyParser.json());
+app.use(express.json());
+
 app.use('/', router);
 app.use(express.static("public"));
 

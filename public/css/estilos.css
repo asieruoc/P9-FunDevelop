@@ -76,3 +76,8 @@ div.radio.radio-adjust{
     text-align: center;
     padding: 10px;
 }
+
+.cell {
+    width: 100px;
+    height: 100px;
+}

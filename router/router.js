@@ -8,48 +8,10 @@ const JS_CONTENT_TYPE="text/javascript";
 const path = require('path');
 var express = require('express');
 var router = express.Router();
+var provider = require('../provider/memory/salas-provider');
 
 
-var salas = [
-    {
-        id: "sala1",
-        name: "SALA 1",
-        players: [
-            {
-                id: 1,
-                name: "Jugador 1",
-                avatar: 1
-            }
-        ]
-    },
-    {
-        id: "sala2",
-        name: "SALA 2",
-        players: [
-        ]
-    },
-    {
-        id: "sala3",
-        name: "SALA 3",
-        players: [
-            {
-                id: 2,
-                name: "Jugador 2",
-                avatar: 4
-            },
-            {
-                id: 3,
-                name: "Jugador 3",
-                avatar: 2
-            }
-        ]
-    },
-    {
-        id: "sala4",
-        name: "SALA 4",
-        players: []
-    }
-];
+
 
 // Home page route.
 router.get('/', function (req, res) {
@@ -57,15 +19,27 @@ router.get('/', function (req, res) {
     res.render('index');
 })
 
-router.post('/salas/:id', function(req, res) {
-    req.body.user
-    var sala = salas.find(() => {
-        
-    })
+router.post('/juego/:salaId', function(req, res) {
+    var player = req.body.userData;
+    var sala = provider.asignarJugadorASala(req.params.salaId, player);
+    res.send(JSON.stringify(sala));
 }); 
 
+router.get('/sala/:salaId', function (req, res) {
+    var sala = provider.findSalaById(req.params.salaId);
+    res.render('juego', {sala: sala});
+
+    //res.sendFile(path.join(__dirname, '/../public/salas.html'));
+})
+
 router.get('/salas', function (req, res) {
-    res.render('salas', {salas: salas});
+    res.render('salas', {salas: provider.getSalas()});
+
+    //res.sendFile(path.join(__dirname, '/../public/salas.html'));
+})
+
+router.post('/salas', function (req, res) {
+    res.render('salas', {salas: provider.getSalas()});
 
     //res.sendFile(path.join(__dirname, '/../public/salas.html'));
 })
