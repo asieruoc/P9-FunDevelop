@@ -1,0 +1,26 @@
+{
+  "name": "fun-conquest",
+  "version": "1.0.0",
+  "description": "game fun conquest",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asieruoc/P9-FunDevelop.git"
+  },
+  "author": "FunDevelop",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/asieruoc/P9-FunDevelop/issues"
+  },
+  "homepage": "https://github.com/asieruoc/P9-FunDevelop#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "consolidate": "^0.16.0",
+    "express": "^4.17.1",
+    "mustache": "^4.2.0"
+  }
+}

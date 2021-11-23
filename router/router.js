@@ -5,6 +5,73 @@ const CSS_CONTENT_TYPE="text/css";
 const PNG_CONTENT_TYPE="image/png";
 const JS_CONTENT_TYPE="text/javascript";
 
+const path = require('path');
+var express = require('express');
+var router = express.Router();
+
+
+var salas = [
+    {
+        id: "sala1",
+        name: "SALA 1",
+        players: [
+            {
+                id: 1,
+                name: "Jugador 1",
+                avatar: 1
+            }
+        ]
+    },
+    {
+        id: "sala2",
+        name: "SALA 2",
+        players: [
+        ]
+    },
+    {
+        id: "sala3",
+        name: "SALA 3",
+        players: [
+            {
+                id: 2,
+                name: "Jugador 2",
+                avatar: 4
+            },
+            {
+                id: 3,
+                name: "Jugador 3",
+                avatar: 2
+            }
+        ]
+    },
+    {
+        id: "sala4",
+        name: "SALA 4",
+        players: []
+    }
+];
+
+// Home page route.
+router.get('/', function (req, res) {
+    //res.render(path.join(__dirname, '/../public/index.html'), {name: "hola"});
+    res.render('index');
+})
+
+router.post('/salas/:id', function(req, res) {
+    req.body.user
+    var sala = salas.find(() => {
+        
+    })
+}); 
+
+router.get('/salas', function (req, res) {
+    res.render('salas', {salas: salas});
+
+    //res.sendFile(path.join(__dirname, '/../public/salas.html'));
+})
+  
+module.exports = router;
+/*
 exports.init = function(req, res){
     res.statusCode = 200;
     //Path
@@ -66,3 +133,4 @@ exports.init = function(req, res){
         res.end("Error 404 - Pagina no encontrada");
     }
 }
+/**/

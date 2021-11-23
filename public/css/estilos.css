@@ -46,9 +46,9 @@ div.radio.radio-adjust{
 
 /* Estilo Wrapper (envoltorio) Drag&DRop */
 .wrapper {
-    display: flex;
+  
     justify-content: space-around;
-    padding: 5.5rem;
+    padding: 4.5rem;
 
 }
 .wrapper .box {

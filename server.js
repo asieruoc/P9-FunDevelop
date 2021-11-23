@@ -14,6 +14,36 @@ const serverConfig = JSON.parse(serverConfigFile);
 const hostname = serverConfig['hostname'];
 const port = serverConfig['port'];
 
+//Importar modulo express
+const express = require('express')
+//Importar modulo bodyParser (nos permite parsear el cuerpo de la petición (Get,Post))
+//Express funciona con middleware, que son como diferentes capas que se van añadiendo y cada vez que se realice una petición HTTP
+//va a pasar por esas distintas capas.
+const bodyParser = require('body-parser')
+
+//creamos variable app que llama a express.
+const app = express()
+
+
+//añadimos los middlewares con el metodo use con la propiedad extended
+app.use(bodyParser.urlencoded({ extended: false}))
+//Para poder admitir peticiones con el cuerpo de mensaje en JSON
+app.use(bodyParser.json())
+app.use('/', router);
+app.use(express.static("public"));
+
+var engines = require('consolidate');
+
+app.set('views', __dirname + '/public');
+app.engine('html', engines.mustache);
+app.set('view engine', 'html');
+
+//app escucha  el puerto 3000 (=> es igual a function())
+app.listen(port, () => {
+    console.log(`Servidor corriendo en http://${hostname}:${port}`);
+})
+
+/*
 //Crear servidor
 //Peticiones Request (via navegador), Devolvemos una respuesta (res)
 //Ante cualquier request devolveremos las siguientes respuestas:
@@ -26,10 +56,6 @@ const server = http.createServer((req, res) => {
       }
     })
 });
-
-//Lanzar servidor
-server.listen(port, hostname, () => {
-  console.log(`Servidor corriendo en http://${hostname}:${port}/`);
-});
+/**/
 
 // Capturar usuario y avatar
