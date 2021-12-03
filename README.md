@@ -132,9 +132,9 @@ Estos dos objetos se deben preparar para establecer que información van a compa
 
 # AUTORES ✒️
 
--   Asier Uruñuela -  [aurunuelas@uoc.edu](mailto:ebresba@uoc.edu)
--   Sofia Figueroa -  [sfigueroaa@uoc.edu](mailto:arrojorge@uoc.edu)
--   Francisca María Rodríguez - [frodriguezvaz@uoc.edu](mailto:arrojorge@uoc.edu)
+-   Asier Uruñuela -  [aurunuelas@uoc.edu](mailto:aurunuelas@uoc.edu)
+-   Sofia Figueroa -  [sfigueroaa@uoc.edu](mailto:sfigueroaa@uoc.edu)
+-   Francisca María Rodríguez - [frodriguezvaz@uoc.edu](mailto:frodriguezvaz@uoc.edu)
 -   Jordi Molet -  [jmoletr@uoc.edu](mailto:jmoletr@uoc.edu)
 
 
