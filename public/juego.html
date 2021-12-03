@@ -16,9 +16,10 @@
     <!--FICHEROS JS-->
     <script> var salaId = "{{sala.id}}";</script>
     <script src="scripts/socket.js"></script>
+    <script src="scripts/juego.js"></script>
 </head>
 <!--Cargamos la función onload que recogerá los jugadores que entren en las salas-->
-<body onload="buttonListeners()">
+<body onload="loadJuego()">
 <div class="container-fluid backgroundSalas">
     <!-- Contenido-->
     <div class="wrapper">
@@ -27,13 +28,15 @@
                 <div class="box">
                     Sala: {{sala.name}}
                     <br>
+                    Turno: <span id="turno"></span> 
+                    <br>
                     jugadores:
                     <ul id="{{sala.id}}"  class="dest-list">
                         {{#sala.players}}
                             {{#.}}
                                 <li id="{{id}}">
                                     <img src="/img/Avatar{{avatar}}.png">
-                                    {{username}}
+                                    <span id="{{username}}">{{username}}</span>
                                 </li>
                             {{/.}}
                         {{/sala.players}}
