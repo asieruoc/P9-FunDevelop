@@ -129,6 +129,30 @@ Estos dos objetos se deben preparar para establecer que información van a compa
 - `setData`: declara qué datos serán transferidos. Este metodo se utiliza en el objeto que vamos a arrastrar.
 - `getData`: declara qué datos serán capturados. Indicamos que información capturaremos del objeto arrastrado.
 
+# EXPRESS JS
+Express.js es un framework para crear  **Web Apps**,  **Web APIs**  o cualquier tipo de  **Web Services**, es libre bajo la licencia MIT.
+
+Express es muy liviano y minimalista además de ser extensible a través de Middlewares.
+
+Los Middlewares interceptan el request y el response para ejecutar una acción en medio.
+
+>" Express.js es un _framework de desarrollo de aplicaciones web minimalista y
+> flexible para Node.js"_.
+
+# SOCKET IO
+Con la aparición de HTML5 y nuevas características apareció la tecnología WebSockets basada en el protocolo ws. Se creó para mantener una conexión continua entre cliente y servidor por lo que la comunicación se hace más fluida que con las tradicionales llamadas http.
+En cierta manera es un buen sustituto de AJAX como tecnología para obtener datos del servidor, ya que no tenemos que pedirlos, el servidor nos los enviará cuando haya nuevos.
+
+Lo único que necesitaremos para que funcione es un servidor de websockets, que construiremos en Node.js con la librería [**Socket.io**](http://socket.io/) que nos facilita el desarrollo de aplicaciones utilizando Websockets en el cliente y en el servidor.
+
+En nuestro proyecto, hemos instalado las librerias Express y Socket.io al lado del servidor donde creamos una aplicación con **Express**, que pasaremos a un servidor http y todo esto irá ligado al servidor de websockets que creamos 
+con **socket.io**.
+
+Disponemos de un array de salas que enviaremos cuando se conecte un cliente web (jugador).
+
+Usamos io.on() y le pasamos el mensaje "connection" para que el servidor de websockets, que lo tenemos en la variable `io`, esté atento a que se realice una conexión. Dentro de éste método enviaremos el array de objetos salas con el evento `'socket'`.
+El evento `socket` lo recogeremos en el cliente, en el fichero JavaScript de la parte cliente.
+Nuestro fichero .js enlaza en su head el script de socket.io`. Socket.io es una librería que funciona tanto en cliente como servidor precisamente para conseguir la conexión bidireccional.
 
 # AUTORES ✒️
 
