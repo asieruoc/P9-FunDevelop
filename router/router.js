@@ -10,14 +10,13 @@ var express = require('express');
 var router = express.Router();
 var provider = require('../provider/memory/salas-provider');
 
-
-
 // Home page route.
 router.get('/', function (req, res) {
     //res.render(path.join(__dirname, '/../public/index.html'), {name: "hola"});
     res.render('index');
 })
 
+//se estan pasando los datos del usuario
 router.post('/juego/:salaId', function(req, res) {
     var player = req.body.userData;
     var sala = provider.asignarJugadorASala(req.params.salaId, player);

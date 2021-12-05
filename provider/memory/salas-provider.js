@@ -1,3 +1,4 @@
+//Array de Salas que enviamos cuando se conecte un cliente web (jugador)
 var salas = [
     {
         id: "sala1",
@@ -14,9 +15,14 @@ var salas = [
         id: "sala2",
         name: "SALA 2",
         players: [
+            {
+                id: 2,
+                username: "Jugador 2",
+                avatar: 2
+            }
         ]
     },
-    {
+    /*{
         id: "sala3",
         name: "SALA 3",
         players: [
@@ -36,10 +42,10 @@ var salas = [
         id: "sala4",
         name: "SALA 4",
         players: []
-    }
+    }*/
 ];
 
-
+//exporta funciones (metodos para controlar el comportamiento del array)
 module.exports = {
     getSalas: function() {
         return salas;
@@ -55,6 +61,7 @@ module.exports = {
         });
         return result;
     },
+    //hace un push al array de jugadores de la sala en concreto.
     asignarJugadorASala(salaId, jugador) {
         var sala = this.findSalaById(salaId);
         if(sala && !this.isPlayerInSala(sala, jugador)){

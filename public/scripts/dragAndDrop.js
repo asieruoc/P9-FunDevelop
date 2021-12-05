@@ -32,6 +32,7 @@ const drop = event => {
 
     var url = "http://localhost:3000/juego/"+destList.id;
     var userData = JSON.parse(localStorage.getItem("userData"));
+    //petición a un endpoint
     $.ajax({
       url: url,
       type: 'POST',

@@ -30,6 +30,7 @@
     border-width: 1px;
     border-radius: .25rem;
     border-top-right-radius: .25rem;
+    text-align: left;
 }
 
 /* Estilo titulo Formulario Principal */
@@ -71,12 +72,26 @@ div.radio.radio-adjust{
 
 /* Estilo titulo Salas */
 .tituloSalas{
-    font-size: 30px;
+    font-size: 20px;
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
     padding: 10px;
 }
 
+/* Estilo titulo Salas */
+.estiloSala{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: left;
+    padding: 30px;
+}
+
+.estiloCeldas{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    padding: 20px;
+}
 .cell {
     width: 100px;
     height: 100px;
