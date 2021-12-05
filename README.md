@@ -171,3 +171,4 @@ Nuestro fichero .js enlaza en su head el script de socket.io`. Socket.io es una 
 - [Window.localStorage](https://developer.mozilla.org/es/docs/Web/API/Window/localStorage), publicado por MDN Web Docs.
 - [HTML 5](https://www.arkaitzgarro.com/html5/capitulo-10.html), publicado por ArkaitzGarro.com
 - [Curso HTML5 API Drag and Drop I video 39](https://www.youtube.com/watch?v=lex-JCYuYEo), publicado por pildorasinformaticas.
+- [WebSockets: Cómo utilizar Socket.io en tus aplicaciones web](https://carlosazaustre.es/websockets-como-utilizar-socket-io-en-tu-aplicacion-web), publicado por   Carlos Azaustre.
