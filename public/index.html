@@ -16,29 +16,32 @@
 </head>
 <!--Cargamos función loadUserData-->
 <body onload="loadUserData()">
+{{name}}
 <!--Creamos clase contenedor con ancho variable que se adapte al ancho del navegador-->
 <div class="container-fluid backgroundHome">
     <!-- Contenido-->
-    <!--Creamos contenedor con opacidad y creamos nuestra clase containerFormat para personalizarla desde css-->
-    <div class="container bg-light opacity-90 containerFormat col-md-5">
+    <!-- Usamos la propiedad Flex para conseguir que sea responsive-->
+    <div class="h-100 d-flex justify-content-center align-items-center">
+        <div class="badge bg-secondary align-items-left">
         <!--Creamos nuestra clase labelTitulo para personalizarla desde css-->
         <div class="labelTitulo">
             <label><img src="/img/banderas.png">Entra y conquista el mundo.</label>
         </div>
+
         <!--Creamos el formulario con metodo post-->
         <form id="userLogin" action="/salas" method="post">
-            </br>
+            <br>
             <!--Creamos elemento nombre-->
-            <div class="form-group">
+            <!--Creamos contenedor con opacidad y creamos nuestra clase containerFormat para personalizarla desde (container bg-light opacity-90 containerFormat col-md-5)css-->
+            <div class="form-group containerFormat">
                 <label for="inputName">NOMBRE:</label>
                 <input type="text" class="form-control" id="inputName" name="playerName" placeholder="Entra tu nombre">
             </div>
-            </br>
             <!--Creamos elemento avatar-->
-            <div class="form-group">
+            <div class="form-group containerFormat">
                 <label for="">AVATAR:</label>
             </div>
-            </br>
+
             <!--Creamos clase para garantizar márgenes adecuados para las etiquetas y casillas de verificación-->
             <div class="form-check">
                 <div class="layout-box">
@@ -71,12 +74,14 @@
                     </div>
                 </div>
             </div>
-            </br>
+            <br>
+            <br>
             <!--Creamos boton que llama a la función sendForm-->
             <div class="text-center">
                 <button type="button" class="btn btn-primary" onclick="sendForm()">Entrar</button>
             </div>
         </form>
+        </div>
     </div>
 </div>
 

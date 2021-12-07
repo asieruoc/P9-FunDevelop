@@ -29,6 +29,24 @@ const drop = event => {
     li.draggable = false;
     /*Se añade la lista al elemento destList (lista donde se muestran todos los jugadores de la sala)*/
     destList.appendChild(li);
+
+    var url = "http://localhost:3000/juego/"+destList.id;
+    var userData = JSON.parse(localStorage.getItem("userData"));
+    //petición a un endpoint
+    $.ajax({
+      url: url,
+      type: 'POST',
+      data: JSON.stringify({userData}),
+      contentType: 'application/json; charset=utf-8',
+      dataType: 'json',
+      async: false,
+      statusCode: {
+        200: function() {
+          window.location = "http://localhost:3000/sala/"+destList.id;
+        }
+      }      
+  });
+
   /*Controlamos posibles errores*/
   } else if(destList.id === parentId){
     alert("Error: El jugador ya está en la sala");
