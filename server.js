@@ -1,28 +1,29 @@
-const http = require('http');
-const fs = require('fs');
-// Iniciamos un servidor en express y llamamos a la libreria express.
-const express = require('express')
-//Variable app que hace que se ejecute esta libreria express.
-const app = express();
-//Creamos el servidor, requiere la libreria HTTP y usando el metodo server le pasamos la variable app (nuestra aplicación)
-const server = http.createServer(app);
-//Variable io tendra toda la funcionalidad de los sockets.
+// const express = require('express') - Iniciamos un servidor en express y llamamos a la libreria
+// express.
+//const app = express(); - Variable app que hace que se ejecute esta libreria express.
+//const server = http.createServer(app); - Creamos el servidor, requiere la libreria HTTP
+// y usando el metodo server le pasamos la variable app (nuestra aplicación)
+//const { Server } = require("socket.io"); - Variable io tendra toda la funcionalidad de los sockets.
 //Requiere la libreria socket.io y le pasamos la variable server que cointiene el servidor HTTP y nuestra aplicación
-const { Server } = require("socket.io");
-const io = new Server(server, {cors: { origin: "*" } });
-//Importar modulo bodyParser (nos permite parsear el cuerpo de la petición (Get,Post))
+//const bodyParser = require('body-parser') - Importar modulo bodyParser (nos permite parsear el cuerpo de la petición (Get,Post))
 //Express funciona con middleware, que son como diferentes capas que se van añadiendo y cada vez que se realice una petición HTTP
 //va a pasar por esas distintas capas.
-const bodyParser = require('body-parser')
-//Módulo interno de Node. Nos ayuda a realizar la interacción con las peticiones request y response.
+//const mongoose = require('mongoose'); - Módulo interno de Node. Nos ayuda a realizar la interacción con las peticiones request y response.
 
+const http = require('http');
+const fs = require('fs');
+const express = require('express')
+const app = express();
+const server = http.createServer(app);
+const { Server } = require("socket.io");
+const io = new Server(server, {cors: { origin: "*" } });
+const bodyParser = require('body-parser')
 const mongoose = require('mongoose');
 
 //CONNECTING TO DB
 mongoose.connect('mongodb://localhost/fundb')
     .then(db => console.log('Database connected'))
     .catch(err=> console.log(err));
-
 
 // IMPORTING ROUTES
 //Módulo que hemos generado nosotros.

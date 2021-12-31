@@ -3,6 +3,8 @@ var express = require('express');
 var router = express.Router();
 var provider = require('../provider/memory/salas-provider');
 
+const Jugador = require('../models/jugador');
+
 // Home page route.
 router.get('/', function (req, res) {
     res.render('index');
@@ -28,11 +30,18 @@ router.get('/salas', function (req, res) {
     //res.sendFile(path.join(__dirname, '/../public/salas.html'));
 })
 
-router.post('/salas', function (req, res) {
-    res.render('salas', {salas: provider.getSalas()});
+//Insertamos jugador en Mongo.
+router.post('/salas', async(req, res) => {
+    const jugador = new Jugador(req.body);
+    await jugador.save();
+    res.render('salas',{salas: provider.getSalas()});
+})
+
+//router.post('/salas', function (req, res) {
+ //   res.render('salas', {salas: provider.getSalas()});
 
     //res.sendFile(path.join(__dirname, '/../public/salas.html'));
-})
+//})
   
 module.exports = router;
 
