@@ -61,6 +61,7 @@ div.radio.radio-adjust{
     list-style-type: none;
     padding: 0;
     margin: 20px;
+    min-height: 25px;
 }
 .wrapper .box ul li {
     padding: 10px;

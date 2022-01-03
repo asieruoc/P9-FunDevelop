@@ -25,11 +25,11 @@ function reloadSalaInfo(sala){
         var li = document.createElement("li");
         li.id = player.id;
         var img = document.createElement("img");
-        img.src = "/img/Avatar"+player.avatar+".png";
+        img.src = "/img/Avatar"+player.avatarId+".png";
         li.append(img);
         var span = document.createElement("span");
-        span.id = player.username;
-        span.innerHTML = player.username;
+        span.id = player.playerName;
+        span.innerHTML = player.playerName;
         li.append(span);
         document.getElementById(sala.id).append(li);
     })

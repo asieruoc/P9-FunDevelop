@@ -19,11 +19,15 @@ const { Server } = require("socket.io");
 const io = new Server(server, {cors: { origin: "*" } });
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose');
+const uri = 'mongodb://127.0.0.1:27017/fundb';
+const Jugador = require("./models/jugador")
 
 //CONNECTING TO DB
 mongoose.connect('mongodb://localhost/fundb')
-    .then(db => console.log('Database connected'))
+  
+    .then(db => console.log('Database connected to', uri))
     .catch(err=> console.log(err));
+    
 
 // IMPORTING ROUTES
 //Módulo que hemos generado nosotros.
@@ -53,14 +57,15 @@ app.set('view engine', 'html');
 //Servidor de websocket (io) este atento cuando se realiza una conexión (io.on)
 //Cuando reciba el mensaje connection ejecuta la función (recibe como parametro un socket)
 //el socket que esta abierto en ese momento, ese cliente web que ha mandado el mensaje.
-io.on("connection", (socket) => {
+io.on("connection", async (socket) => {
   console.log("User connected: " + socket.id)
 
   //Recupera salas.
-  var provider = require('./provider/memory/salas-provider');
+  var provider = require('./provider/mongodb/salas-provider');
 
   //Recorre las salas.
-  provider.getSalas().forEach(sala => {
+  var salas = await provider.getSalas();
+  salas.forEach(sala => {
     console.log("Creado socket en sala "+sala.id);
     //Escucha el evento y crea un socket asociado a cada sala
     socket.on(sala.id, (data) => {

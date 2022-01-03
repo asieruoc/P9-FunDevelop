@@ -30,7 +30,7 @@ const drop = event => {
     /*Se añade la lista al elemento destList (lista donde se muestran todos los jugadores de la sala)*/
     destList.appendChild(li);
 
-    var url = "http://localhost:3000/juego/"+destList.id;
+    var url = "http://localhost:3000/api/juego/"+destList.id;
     var userData = JSON.parse(localStorage.getItem("userData"));
     //petición a un endpoint
     $.ajax({

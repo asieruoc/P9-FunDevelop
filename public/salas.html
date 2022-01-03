@@ -26,7 +26,7 @@
                     <div class="tituloSalas">
                         <h4>JUGADORES EN ESPERA</h4>
                     </div>
-                    <!--<ul id="playerList" class="source-list">-->
+                    <ul id="playerList" class="source-list">
                     
                     </ul>
                 </div>
@@ -42,8 +42,8 @@
                                 {{#players}}
                                     {{#.}}
                                         <li id="{{id}}">
-                                            <img src="/img/Avatar{{avatar}}.png">
-                                            {{username}}
+                                            <img src="/img/Avatar{{avatarId}}.png">
+                                            {{playerName}}
                                         </li>
                                     {{/.}}
                                 {{/players}}

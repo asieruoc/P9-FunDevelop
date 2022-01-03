@@ -16,14 +16,14 @@ function loadUserData() {
         radios[radioPos].checked = true;
     }
 }
-/!* Funcion que guarda los datos del formulario a localstorage*!/
+/* Funcion que guarda los datos del formulario a localstorage*/
 function sendForm() {
     /!*DOM. Recuperamos un elemento (formulario) por su identificador (userLogin) *!/
     var form = document.getElementById("userLogin");
     /!*DOM. Recuperamos un elemento (nombre jugador) por su identificador (inputName)*!/
     var username = document.getElementById("inputName").value;
     /!*DOM. Recuperamos los elementos (avatares) por su nombre (avatar-radio)*!/
-    var radios = document.getElementsByName('avatar-radio');
+    var radios = document.getElementsByName('avatarId');
     var found = false;
     var i = 0;
     var avatar = 0;
@@ -36,11 +36,25 @@ function sendForm() {
         i++;
     }
     /!*Guardamos en userPrefs en clave-valor username y avatar*!/
-    var userPrefs = {username: username, avatar: avatar};
-
-    /!*Convertimos el objeto userPrefs en una cadena de texto JSON y lo guardamos usando localStorage*!/
-    localStorage.setItem("userData", JSON.stringify(userPrefs));
-    /!*Iniciamos envio del formulario*!/
-    form.submit();
-}*/
+    var userData = {playerName: username, avatarId: avatar};
+    var url = "http://localhost:3000/api/login";
+   
+    //petición a un endpoint
+    $.ajax({
+      url: url,
+      type: 'POST',
+      data: JSON.stringify({userData}),
+      contentType: 'application/json; charset=utf-8',
+      dataType: 'json',
+      async: false,
+      statusCode: {
+        200: function(user) {
+            /!*Convertimos el objeto userPrefs en una cadena de texto JSON y lo guardamos usando localStorage*!/
+            localStorage.setItem("userData", JSON.stringify(user));
+            /!*Iniciamos envio del formulario*!/
+            form.submit();
+        }
+      }      
+  });
+}
 
