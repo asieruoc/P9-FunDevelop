@@ -39,10 +39,10 @@ function reloadSalaInfo(sala){
     })
 }
 
-function seleccionarCelda(position, username) {
-    document.querySelectorAll(".cell")[position].innerHTML = username;
+function seleccionarCelda(position, playerName) {
+    document.querySelectorAll(".cell")[position].innerHTML = playerName;
     document.querySelectorAll(".cell")[position].setAttribute("disabled", true);
-    $(document.querySelectorAll(".cell")[position]).css("background-color", coloresJugadores[username]);
+    $(document.querySelectorAll(".cell")[position]).css("background-color", coloresJugadores[playerName]);
 }
 
 function loadJuego() {

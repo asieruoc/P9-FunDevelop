@@ -57,7 +57,7 @@ module.exports = {
     },
     isPlayerInSala: function(sala, jugador){
         var result = sala.players.find((p) => {
-            return (p.username === jugador.username);
+            return (p.playerName === jugador.playerName);
         });
         return result;
     },

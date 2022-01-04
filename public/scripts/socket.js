@@ -10,7 +10,7 @@ socket.on(salaId, (data) => {
         reloadSalaInfo(sala);
     }
     else{
-        seleccionarCelda(position, player.username);
+        seleccionarCelda(position, player.playerName);
     }
 });
 
