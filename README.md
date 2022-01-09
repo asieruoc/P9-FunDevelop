@@ -1,6 +1,6 @@
 # FUN DEVELOP
 
-Bienvenidos a nuestro proyecto! Este proyecto esta basado en un juego de conquista donde cada jugador deberá conquistar casillas del tablero. Ganará el jugador que conquiste más casillas.
+¡Bienvenidos a nuestro proyecto! Este proyecto esta basado en un juego de conquista donde cada jugador deberá conquistar casillas del tablero. Ganará el jugador que conquiste más casillas.
 
 ## SOFTWARE USADO  🛠️
 Hemos usado el siguiente software:
@@ -12,7 +12,7 @@ Hemos usado el siguiente software:
 
 # DETALLE DE LA IMPLANTACIÓN
 
-En este apartado explicaremos los detalles más relevantes de nuestra código.
+En este apartado explicaremos los detalles más relevantes de nuestro código.
 
 ## ESTRUCTURA DEL PROYECTO 📂
 
@@ -55,7 +55,7 @@ Node.js es una plataforma que se usa principalmente para desarrollar aplicacione
 	 - `miElemento.getAttribute()`: Recuperamos el valor del atributo.
 	 - `miElemento.setAttribute()`: Modificamos el valor del atributo.
 	 - `miElemento.removeAttribute()`: Eliminamos el atributo.
-	 - `miElemento.hasAttribute()`: Nos devuelve un verdardero si existe el atributo o un false si no existe.
+	 - `miElemento.hasAttribute()`: Nos devuelve un verdadero si existe el atributo o un false si no existe.
 
  - **Manipular información de un nodo**:
 	 - `innerHTML`: Recuperamos información, modificamos o eliminamos. 
@@ -75,7 +75,7 @@ Node.js es una plataforma que se usa principalmente para desarrollar aplicacione
 # BOOTSTRAP
 Bootstrap es uno de los **_frameworks_** más populares para el desarrollo del **_frontend_** de páginas web. La herramienta proporciona plantillas para CSS y HTML que facilitan la colocación y el diseño de la página, las fuentes, los botones y los elementos.
 
-Desctacamos a continuación, algunas de las propiedades y clases usadas en nuestro proyecto:
+Destacamos a continuación, algunas de las propiedades y clases usadas en nuestro proyecto:
 
 - **Layout**: Hemos usado la clase **Container** que són bloques de construcción que contienen, rellenan y alinean su contenido dentro de un dispositivo o ventana gráfica determinada.
 
@@ -88,7 +88,7 @@ Este sistema de cuadrícula puede adaptarse a los seis puntos de interrupción o
 	- Extra grande (xl): ≥1200px
 	- Extra extra grande (xxl): ≥1400px
 
-	Teniendo en cuenta estos **breakpoints** y propiedades importantes 		como `background-size:cover` podemos realizar un diseño responsive que 	se adapte a cualquier resolución de pantalla.
+Teniendo en cuenta estos **breakpoints** y propiedades importantes como `background-size:cover` podemos realizar un diseño responsive que se adapte a cualquier resolución de pantalla.
 
 - **Forms**: Hemos usado la clase **form-Control** para los controles de formulario, la clase **form-check** para garantizar márgenes adecuados para las etiquetas y casillas de verificación.
 	
@@ -114,7 +114,7 @@ Esta API se define como un mecanismo basado en eventos, donde identificamos los 
 
 La utilidad de esta API es permitir a un usuario que visita nuestra pagina web la posibilidad de que arrastre elementos dentro de la misma.
 
-Los **objetos que participan** en esta API són:
+Los **objetos que participan** en esta API son:
 - El **objeto de destino** que tiene disponibles los siguientes eventos:
 	- `Dragenter`: cuando el ratón entra en el área de destino.
 	- `Dragover`: cuando el ratón se mueve sobre el área de destino.
@@ -145,12 +145,12 @@ En cierta manera es un buen sustituto de AJAX como tecnología para obtener dato
 
 Lo único que necesitaremos para que funcione es un servidor de websockets, que construiremos en Node.js con la librería [**Socket.io**](http://socket.io/) que nos facilita el desarrollo de aplicaciones utilizando Websockets en el cliente y en el servidor.
 
-En nuestro proyecto, hemos instalado las librerias Express y Socket.io al lado del servidor donde creamos una aplicación con **Express**, que pasaremos a un servidor http y todo esto irá ligado al servidor de websockets que creamos 
+En nuestro proyecto, hemos instalado las librerías Express y Socket.io al lado del servidor donde creamos una aplicación con **Express**, que pasaremos a un servidor http y todo esto irá ligado al servidor de websockets que creamos 
 con **socket.io**.
 
 Disponemos de un array de salas que enviaremos cuando se conecte un cliente web (jugador).
 
-Usamos io.on() y le pasamos el mensaje "connection" para que el servidor de websockets, que lo tenemos en la variable `io`, esté atento a que se realice una conexión. Dentro de éste método enviaremos el array de objetos salas con el evento `'socket'`.
+Usamos io.on() y le pasamos el mensaje "connection" para que el servidor de websockets, que lo tenemos en la variable `io`, esté atento a que se realice una conexión. Dentro de este método enviaremos el array de objetos salas con el evento `'socket'`.
 El evento `socket` lo recogeremos en el cliente, en el fichero JavaScript de la parte cliente.
 Nuestro fichero .js enlaza en su head el script de socket.io`. Socket.io es una librería que funciona tanto en cliente como servidor precisamente para conseguir la conexión bidireccional.
 
